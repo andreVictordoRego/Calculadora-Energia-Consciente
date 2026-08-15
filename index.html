@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculadora Energia Consciente - estime o consumo e o custo mensal dos seus equipamentos elétricos.">
+  <title>Energia Consciente | Calculadora de Consumo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav container">
+      <div class="brand">
+        <span class="brand-mark">⚡</span>
+        <span>Energia <strong>Consciente</strong></span>
+      </div>
+      <a class="nav-link" href="#como-funciona">Como funciona</a>
+    </nav>
+
+    <div class="hero-content container">
+      <div class="hero-copy">
+        <span class="eyebrow">Educação e eficiência energética</span>
+        <h1>Descubra quanto seus equipamentos podem consumir.</h1>
+        <p>
+          Informe a potência, o tempo de uso e a tarifa de energia.
+          A calculadora estima o consumo mensal em kWh e o custo aproximado.
+        </p>
+        <a class="button button-light" href="#calculadora">Calcular agora ↓</a>
+      </div>
+      <div class="hero-card">
+        <div class="mini-label">Exemplo</div>
+        <div class="example-title">Chuveiro elétrico</div>
+        <div class="example-value">82,5 <small>kWh/mês</small></div>
+        <div class="example-cost">≈ R$ 78,38/mês</div>
+        <div class="example-note">5.500 W · 30 min/dia · 30 dias</div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="calculadora" class="section container">
+      <div class="section-heading">
+        <span class="eyebrow">01 · Calculadora</span>
+        <h2>Calcule seu consumo</h2>
+        <p>Adicione os equipamentos que você deseja analisar.</p>
+      </div>
+
+      <div class="calculator-grid">
+        <div class="panel">
+          <div class="panel-top">
+            <div>
+              <h3>Seus equipamentos</h3>
+              <p>Use a potência indicada na etiqueta ou no manual do aparelho.</p>
+            </div>
+            <button id="addDevice" class="button button-primary">+ Adicionar</button>
+          </div>
+
+          <div class="tariff-box">
+            <label for="tariff">Tarifa de energia (R$/kWh)</label>
+            <div class="tariff-input">
+              <span>R$</span>
+              <input id="tariff" type="number" min="0" step="0.01" value="0.95" inputmode="decimal">
+            </div>
+            <small>Valor de referência. Consulte sua conta de energia para usar uma tarifa mais próxima da sua realidade.</small>
+          </div>
+
+          <div id="devices" class="devices"></div>
+
+          <button id="calculate" class="button button-primary button-full">Calcular consumo</button>
+        </div>
+
+        <aside class="results">
+          <div class="result-card highlight">
+            <span>Consumo estimado</span>
+            <strong id="totalKwh">0,00 <small>kWh/mês</small></strong>
+          </div>
+          <div class="result-card">
+            <span>Custo estimado</span>
+            <strong id="totalCost">R$ 0,00</strong>
+          </div>
+          <div class="result-card">
+            <span>Equipamentos</span>
+            <strong id="deviceCount">0</strong>
+          </div>
+
+          <div class="ranking">
+            <div class="ranking-header">
+              <h3>Onde está o maior consumo?</h3>
+              <span>kWh/mês</span>
+            </div>
+            <div id="rankingList" class="ranking-list">
+              <p class="empty">Adicione equipamentos para visualizar o ranking.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="formula">
+        <div class="formula-icon">∑</div>
+        <div>
+          <strong>Como calculamos?</strong>
+          <p>Consumo mensal = potência (W) ÷ 1000 × horas de uso por dia × dias de uso no mês.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="section section-soft">
+      <div class="container">
+        <div class="section-heading centered">
+          <span class="eyebrow">02 · Aprenda</span>
+          <h2>Entenda sua conta de energia</h2>
+          <p>Conhecer os conceitos básicos ajuda a tomar decisões melhores sobre o uso dos equipamentos.</p>
+        </div>
+
+        <div class="info-grid">
+          <article class="info-card">
+            <div class="info-icon">W</div>
+            <h3>Potência</h3>
+            <p>É a quantidade de energia que um equipamento utiliza por unidade de tempo. É normalmente indicada em watts (W).</p>
+          </article>
+          <article class="info-card">
+            <div class="info-icon">kWh</div>
+            <h3>Consumo</h3>
+            <p>O quilowatt-hora (kWh) é uma unidade usada para medir a energia consumida ao longo do tempo.</p>
+          </article>
+          <article class="info-card">
+            <div class="info-icon">R$</div>
+            <h3>Custo</h3>
+            <p>O custo estimado resulta do consumo em kWh multiplicado pela tarifa informada na calculadora.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading">
+        <span class="eyebrow">03 · Boas práticas</span>
+        <h2>Pequenas mudanças podem ajudar</h2>
+      </div>
+      <div class="tips">
+        <div class="tip"><span>01</span><p>Observe a potência e o tempo de uso dos equipamentos que mais utiliza.</p></div>
+        <div class="tip"><span>02</span><p>Evite deixar equipamentos ligados sem necessidade.</p></div>
+        <div class="tip"><span>03</span><p>Compare equipamentos considerando também o consumo de energia.</p></div>
+        <div class="tip"><span>04</span><p>Use a sua conta de energia para conferir a tarifa e o consumo reais.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <strong>⚡ Energia Consciente</strong>
+        <p>Projeto de educação e conscientização sobre o consumo de energia elétrica.</p>
+      </div>
+      <div class="footer-note">Ferramenta educativa · Valores são estimativas</div>
+    </div>
+  </footer>
+
+  <template id="deviceTemplate">
+    <div class="device">
+      <div class="device-head">
+        <label class="device-name-label">Equipamento</label>
+        <button type="button" class="remove" title="Remover equipamento">Remover</button>
+      </div>
+      <div class="device-fields">
+        <div class="field field-name">
+          <input class="name" type="text" placeholder="Ex.: Chuveiro" aria-label="Nome do equipamento">
+        </div>
+        <div class="field">
+          <label>Potência (W)</label>
+          <input class="power" type="number" min="0" step="1" value="100" inputmode="decimal">
+        </div>
+        <div class="field">
+          <label>Horas/dia</label>
+          <input class="hours" type="number" min="0" max="24" step="0.1" value="1" inputmode="decimal">
+        </div>
+        <div class="field">
+          <label>Dias/mês</label>
+          <input class="days" type="number" min="0" max="31" step="1" value="30" inputmode="numeric">
+        </div>
+      </div>
+      <div class="device-result">Consumo: <strong>0,00 kWh/mês</strong> · Custo: <strong>R$ 0,00</strong></div>
+    </div>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
