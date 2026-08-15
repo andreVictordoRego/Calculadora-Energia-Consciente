@@ -2,20 +2,6 @@
 
 Projeto web estático para educação e conscientização sobre consumo de energia elétrica.
 
-## Publicar no GitHub Pages
-
-1. Crie um repositório no GitHub, por exemplo: `energia-consciente`.
-2. Envie os arquivos:
-   - `index.html`
-   - `style.css`
-   - `script.js`
-3. No GitHub, abra **Settings → Pages**.
-4. Em **Build and deployment**, selecione:
-   - Source: **Deploy from a branch**
-   - Branch: **main**
-   - Folder: **/ (root)**
-5. Salve e aguarde a publicação.
-
 ## Fórmula
 
 Consumo mensal:
