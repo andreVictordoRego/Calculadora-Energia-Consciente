@@ -233,3 +233,96 @@ footer { background: #11221b; color: white; padding: 36px 0; }
   .tip:nth-child(even) { padding-left: 0; }
   .footer-inner { flex-direction: column; }
 }
+
+
+.nav-links { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.hero-secondary-link { display: inline-block; margin-left: 16px; color: rgba(255,255,255,.88); font-size: 14px; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
+.example-disclaimer { margin: 14px 0 0; color: rgba(255,255,255,.7); font-size: 11px; line-height: 1.45; }
+.comparison { margin-top: 20px; }
+.comparison h3 { margin: 0 0 6px; font-size: 20px; }
+.comparison p { margin: 0; color: var(--muted); font-size: 13px; }
+.comparison-fields { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto; gap: 14px; align-items: end; margin-top: 18px; }
+.comparison-fields select, .comparison-fields input { width: 100%; min-height: 42px; border: 1px solid var(--line); border-radius: 8px; padding: 9px; font: inherit; background: white; color: var(--text); }
+.comparison-result { margin-top: 16px; padding: 14px; background: var(--accent); border-radius: 12px; font-size: 14px; }
+.comparison-result strong { color: var(--primary-dark); }
+.safety-grid, .project-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+.safety-card, .project-card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; }
+.safety-icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 12px; background: #fff0e8; color: #9a421c; font-weight: 800; margin-bottom: 14px; }
+.safety-card h3, .project-card h3 { margin: 0 0 8px; font-size: 17px; }
+.safety-card p, .project-card p { margin: 0; color: var(--muted); font-size: 14px; }
+.safety-note { margin: 18px 0 0; padding: 16px; border-left: 4px solid #b65b36; background: #fff4ee; border-radius: 8px; font-size: 13px; }
+.ods-note { margin-top: 20px; padding: 20px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface-2); }
+.ods-note p { margin: 6px 0 0; color: var(--muted); font-size: 14px; }
+.quiz { max-width: 760px; margin: 0 auto; }
+.quiz fieldset { margin: 0 0 16px; padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.quiz legend { padding: 0 6px; font-weight: 700; }
+.quiz fieldset label { display: flex; gap: 10px; align-items: flex-start; margin: 12px 0; color: var(--muted); font-size: 14px; cursor: pointer; }
+.quiz input[type="radio"] { margin-top: 5px; accent-color: var(--primary); }
+.quiz-result { margin-top: 14px; padding: 14px; border-radius: 10px; background: var(--accent); color: var(--primary-dark); font-weight: 600; }
+.quiz-result:empty { display: none; }
+@media (max-width: 900px) {
+  .nav-links { gap: 12px; }
+  .comparison-fields { grid-template-columns: 1fr 1fr; }
+  .comparison-fields .button { grid-column: 1 / -1; }
+}
+@media (max-width: 650px) {
+  .nav { align-items: flex-start; flex-direction: column; justify-content: center; gap: 10px; padding-top: 16px; padding-bottom: 16px; }
+  .nav-links { gap: 12px; }
+  .nav-link { display: inline; font-size: 12px; }
+  .hero-secondary-link { margin: 16px 0 0; }
+  .comparison-fields, .safety-grid, .project-grid { grid-template-columns: 1fr; }
+  .comparison-fields .button { grid-column: auto; }
+}
+
+.quiz-intro { margin: 0 0 20px; color: var(--muted); font-size: 14px; }
+.quiz-scenario { margin: 4px 0 16px; color: var(--text); font-size: 14px; line-height: 1.65; }
+.quiz-result { line-height: 1.6; }
+.quiz-feedback { margin-top: 10px; }
+.quiz-feedback p { padding-top: 10px; border-top: 1px solid rgba(17,107,69,.16); font-weight: 400; }
+.quiz-disclaimer { margin: 12px 0 0; color: var(--muted); font-size: 12px; font-weight: 400; }
+
+
+/* Orientação de resposta a situações de risco */
+.safety-emergency {
+  margin-top: 1.25rem;
+  padding: 1.25rem 1.4rem;
+  border: 1px solid #f1c7a6;
+  border-radius: 16px;
+  background: #fff8f2;
+  color: #3d342e;
+}
+.safety-emergency h3 {
+  margin: 0 0 .65rem;
+  font-size: 1.08rem;
+}
+.safety-emergency ul {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+.safety-emergency li {
+  margin: .45rem 0;
+  line-height: 1.55;
+}
+
+
+/* Quiz interativo: uma pergunta por vez e feedback após cada resposta */
+.quiz-one-at-a-time { max-width: 780px; margin: 0 auto; }
+.quiz-progress { margin-bottom: 1.5rem; color: #64748b; font-size: .95rem; }
+.quiz-progress-track { height: 7px; background: #e2e8f0; border-radius: 999px; overflow: hidden; margin-top: .65rem; }
+.quiz-progress-track span { display: block; height: 100%; width: 20%; background: #087f8c; border-radius: 999px; transition: width .25s ease; }
+.quiz-question-card { padding: clamp(1.1rem, 3vw, 2rem); border: 1px solid #dbe4ea; border-radius: 18px; background: #fff; }
+.quiz-question-card h3 { margin: 0 0 1.25rem; line-height: 1.45; }
+.quiz-options { display: grid; gap: .75rem; }
+.quiz-option { display: flex; align-items: flex-start; gap: .7rem; padding: .9rem 1rem; border: 1px solid #d7e0e7; border-radius: 12px; cursor: pointer; transition: border-color .15s, background .15s; }
+.quiz-option:hover { border-color: #087f8c; background: #f5fbfc; }
+.quiz-option input { margin-top: .25rem; flex: 0 0 auto; }
+.quiz-option.correct { border-color: #16834a; background: #effaf3; }
+.quiz-option.incorrect { border-color: #c43d3d; background: #fff2f2; }
+.quiz-feedback-live { margin-top: 1rem; padding: 1rem 1.1rem; border-radius: 12px; line-height: 1.55; }
+.quiz-feedback-live.good { background: #effaf3; border: 1px solid #a8dfba; }
+.quiz-feedback-live.try-again { background: #fff7ed; border: 1px solid #fed7aa; }
+.quiz-actions { display: flex; justify-content: flex-end; gap: .8rem; flex-wrap: wrap; margin-top: 1.2rem; }
+.quiz-actions button:disabled { opacity: .55; cursor: not-allowed; }
+.quiz-result-summary { text-align: center; padding: 1.5rem; }
+.quiz-result-summary strong { display: block; font-size: 1.6rem; margin: .5rem 0; }
+@media (max-width: 520px) { .quiz-actions .button { width: 100%; } }

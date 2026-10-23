@@ -1,25 +1,34 @@
-# Energia Consciente — Calculadora de Consumo
+# Energia Consciente — versão ampliada
 
-Projeto web estático para educação e conscientização sobre consumo de energia elétrica.
+## Arquivos
+- `index.html`: estrutura e conteúdo do site.
+- `style.css`: estilos e responsividade.
+- `script.js`: calculadora, comparação de cenários e quiz educativo.
 
-## Fórmula
+## Como testar
+Abra `index.html` em um navegador moderno. Para publicar, envie os três arquivos para o repositório GitHub Pages mantendo os nomes e a estrutura.
 
-Consumo mensal:
-
-`kWh = (potência em W / 1000) × horas por dia × dias por mês`
-
-Custo estimado:
-
-`R$ = kWh × tarifa informada`
+## Alterações
+- Navegação para calculadora, economia, segurança, projeto e quiz.
+- Seção de segurança elétrica residencial.
+- Dicas ampliadas de economia de energia.
+- Comparador de cenário de uso de equipamento.
+- Quiz educativo de três perguntas.
+- Avisos de que os valores são estimativas e de que a fatura pode conter outros componentes.
 
 ## Observação
+O projeto é educativo. A calculadora estima consumo com base na potência informada, horas/dia, dias/mês e tarifa informada; não substitui a fatura da concessionária nem avaliação profissional de instalações elétricas.
 
-A calculadora é uma ferramenta educativa e apresenta uma estimativa. O valor efetivamente cobrado na conta pode envolver componentes e tarifas adicionais. Para maior precisão, informe uma tarifa compatível com a conta de energia analisada.
 
-## Próximas versões
+## Ordem didática das seções
+1. Educação para a comunidade / Sobre o projeto
+2. Segurança elétrica
+3. Consumo consciente
+4. Entenda sua conta de energia
+5. Calculadora de consumo
+6. Avaliação do aprendizado
 
-- adicionar gráficos;
-- permitir salvar/compartilhar uma simulação;
-- gerar relatório em PDF;
-- criar QR Code para uso durante a ação presencial;
-- adicionar dicas específicas por tipo de equipamento.
+O menu mantém acesso direto a todas as seções, incluindo a calculadora.
+
+## Segurança elétrica
+A seção inclui orientações sobre aquecimento anormal, sobrecarga, água, reparos improvisados, disjuntores, cabos danificados e conduta geral diante de situações de risco.
